@@ -100,29 +100,6 @@ def main():
 
                 patch_img = get_image_patch(dataset, x, y, t, t)
 
-                '''if prediction[x:x+t, y:y+t].shape[0] < 256 and prediction[x:x+t, y:y+t].shape[1] < 256:
- 
-                    #print('Shape prediction: ', prediction[x:x+t, y:y+t].shape, 'Input 1: ', prediction[x:x+t, y:y+t].shape[1], prediction[x:x+t, y:y+t].shape[0])
-
-                    patch_img = get_image_patch(dataset, x, y, prediction[x:x+t, y:y+t].shape[1], prediction[x:x+t, y:y+t].shape[0])
-
-                elif prediction[x:x+t, y:y+t].shape[0] < 256:
-
-                    #print('Shape prediction: ', prediction[x:x+t, y:y+t].shape, 'Input 2: ', prediction[x:x+t, y:y+t].shape[0])
-   
-                    patch_img = get_image_patch(dataset, x, y,t, prediction[x:x+t, y:y+t].shape[0])
-
-                elif prediction[x:x+t, y:y+t].shape[1] < 256:
-
-                    #print('Shape prediction: ', prediction[x:x+t, y:y+t].shape, 'Input 3: ',  prediction[x:x+t, y:y+t].shape[1])
-
-                    patch_img = get_image_patch(dataset, x, y, prediction[x:x+t, y:y+t].shape[1], t)
-
-                else:
-                    #print('Shape prediction: ', prediction[x:x+t, y:y+t].shape, 'Input 4: ', prediction[x:x+t, y:y+t].shape)
-
-                    patch_img = get_image_patch(dataset, x, y, t, t)'''
-
                 if not isinstance(patch_img, type(None)):
 
                     pixels_brancos = np.logical_and(np.logical_and(patch_img[:,:,0]==255, patch_img[:,:,1]==255), patch_img[:,:,2]==255)
